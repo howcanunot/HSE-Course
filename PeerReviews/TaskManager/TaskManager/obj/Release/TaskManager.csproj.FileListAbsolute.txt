@@ -1,0 +1,16 @@
+C:\Users\Dova\source\repos\TextManager\TaskManager\bin\Release\TaskManager.exe.config
+C:\Users\Dova\source\repos\TextManager\TaskManager\bin\Release\TaskManager.exe
+C:\Users\Dova\source\repos\TextManager\TaskManager\bin\Release\TaskManager.pdb
+C:\Users\Dova\source\repos\TextManager\TaskManager\bin\Release\TaskManagerLibrary.dll
+C:\Users\Dova\source\repos\TextManager\TaskManager\bin\Release\TaskManagerLibrary.pdb
+C:\Users\Dova\source\repos\TextManager\TaskManager\obj\Release\TaskManager.csprojAssemblyReference.cache
+C:\Users\Dova\source\repos\TextManager\TaskManager\obj\Release\TaskManager.CreateTask.resources
+C:\Users\Dova\source\repos\TextManager\TaskManager\obj\Release\TaskManager.Projects.resources
+C:\Users\Dova\source\repos\TextManager\TaskManager\obj\Release\TaskManager.CreateProject.resources
+C:\Users\Dova\source\repos\TextManager\TaskManager\obj\Release\TaskManager.Properties.Resources.resources
+C:\Users\Dova\source\repos\TextManager\TaskManager\obj\Release\TaskManager.Tasks.resources
+C:\Users\Dova\source\repos\TextManager\TaskManager\obj\Release\TaskManager.csproj.GenerateResource.cache
+C:\Users\Dova\source\repos\TextManager\TaskManager\obj\Release\TaskManager.csproj.CoreCompileInputs.cache
+C:\Users\Dova\source\repos\TextManager\TaskManager\obj\Release\TaskManager.csproj.CopyComplete
+C:\Users\Dova\source\repos\TextManager\TaskManager\obj\Release\TaskManager.exe
+C:\Users\Dova\source\repos\TextManager\TaskManager\obj\Release\TaskManager.pdb

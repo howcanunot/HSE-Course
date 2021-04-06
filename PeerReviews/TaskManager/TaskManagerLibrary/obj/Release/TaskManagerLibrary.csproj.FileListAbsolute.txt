@@ -1,0 +1,6 @@
+C:\Users\Dova\source\repos\TextManager\TaskManagerLibrary\bin\Release\TaskManagerLibrary.dll
+C:\Users\Dova\source\repos\TextManager\TaskManagerLibrary\bin\Release\TaskManagerLibrary.pdb
+C:\Users\Dova\source\repos\TextManager\TaskManagerLibrary\obj\Release\TaskManagerLibrary.csprojAssemblyReference.cache
+C:\Users\Dova\source\repos\TextManager\TaskManagerLibrary\obj\Release\TaskManagerLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Dova\source\repos\TextManager\TaskManagerLibrary\obj\Release\TaskManagerLibrary.dll
+C:\Users\Dova\source\repos\TextManager\TaskManagerLibrary\obj\Release\TaskManagerLibrary.pdb
