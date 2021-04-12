@@ -1,0 +1,10 @@
+C:\Users\Dova\source\repos\HSE-Course\PeerReviews\ProductManager\ProductManager\bin\Debug\ProductManager.exe.config
+C:\Users\Dova\source\repos\HSE-Course\PeerReviews\ProductManager\ProductManager\bin\Debug\ProductManager.exe
+C:\Users\Dova\source\repos\HSE-Course\PeerReviews\ProductManager\ProductManager\bin\Debug\ProductManager.pdb
+C:\Users\Dova\source\repos\HSE-Course\PeerReviews\ProductManager\ProductManager\obj\Debug\ProductManager.csprojAssemblyReference.cache
+C:\Users\Dova\source\repos\HSE-Course\PeerReviews\ProductManager\ProductManager\obj\Debug\ProductManager.Form1.resources
+C:\Users\Dova\source\repos\HSE-Course\PeerReviews\ProductManager\ProductManager\obj\Debug\ProductManager.Properties.Resources.resources
+C:\Users\Dova\source\repos\HSE-Course\PeerReviews\ProductManager\ProductManager\obj\Debug\ProductManager.csproj.GenerateResource.cache
+C:\Users\Dova\source\repos\HSE-Course\PeerReviews\ProductManager\ProductManager\obj\Debug\ProductManager.csproj.CoreCompileInputs.cache
+C:\Users\Dova\source\repos\HSE-Course\PeerReviews\ProductManager\ProductManager\obj\Debug\ProductManager.exe
+C:\Users\Dova\source\repos\HSE-Course\PeerReviews\ProductManager\ProductManager\obj\Debug\ProductManager.pdb
