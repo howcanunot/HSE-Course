@@ -26,15 +26,23 @@ namespace ProductManager
 
         private void CteareRoot(object sender, EventArgs e)
         {
-            TreeNode node = new TreeNode();
+            try
+            {
+                TreeNode node = new TreeNode();
 
-            node.Text = "new";
-            node.Name = GetCurrectName(treeView);
+                node.Text = GetCurrectName(null);
+                node.Name = node.Text;
 
-            node.ImageIndex = 0;
-            node.ContextMenuStrip = nodesMenuStrip;
+                node.ImageIndex = 0;
+                node.ContextMenuStrip = nodesMenuStrip;
 
-            treeView.Nodes.Add(node);
+                treeView.Nodes.Add(node);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
 
         private void CreateNode(object sender, EventArgs e)
@@ -42,15 +50,13 @@ namespace ProductManager
             ToolStripItem menu = sender as ToolStripItem;
 
             TreeNode node = new TreeNode();
-
-            node.Text = GetCurrectName(treeView.SelectedNode);
-            node.Name = node.Text;
-
-            node.ImageIndex = 0;
-            node.ContextMenuStrip = nodesMenuStrip;
-
             try
             {
+                node.Text = GetCurrectName(treeView.SelectedNode);
+                node.Name = node.Text;
+
+                node.ImageIndex = 0;
+                node.ContextMenuStrip = nodesMenuStrip;
                 treeView.SelectedNode.Nodes.Add(node);
                 treeView.SelectedNode.Expand();
 
@@ -63,10 +69,10 @@ namespace ProductManager
 
         private string GetCurrectName(TreeNode parent)
         {
-            if (treeView.SelectedNode.Nodes.Count == 0)
-                return "new1";
             int count = 0;
-            var nodes = treeView.SelectedNode.Nodes;
+            var nodes = parent == null ? treeView.Nodes : parent.Nodes;
+            if (nodes.Count == 0)
+                return "new1";
             foreach (TreeNode node in nodes)
                 if (node.Text.Contains("new")) count = Math.Max(count, int.Parse(node.Text.Substring(3)));
             return "new" + (count + 1).ToString();
