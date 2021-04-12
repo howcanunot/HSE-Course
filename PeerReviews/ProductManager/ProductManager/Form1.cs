@@ -64,6 +64,7 @@ namespace ProductManager
             catch (Exception ex)
             {
                 treeView.Nodes[0].Nodes.Add(node);
+                return;
             }
         }
 
