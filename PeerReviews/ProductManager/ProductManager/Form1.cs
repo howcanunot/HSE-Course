@@ -6,32 +6,49 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ProductManager
 {
     public partial class Form1 : Form
     {
 
+        Dictionary<string, List<Product>> nodesProducts;
+        List<Product> currentList;
         public Form1()
         {
             InitializeComponent();
-
-            treeView.Nodes[0].Checked = false;
+            DesializeTreeView();
+            nodesProducts = new Dictionary<string, List<Product>>();
+            treeView.BackColor = Color.FromArgb(255, 37, 37, 38);
+            treeView.ForeColor = Color.White;
             ImageList imageList = new ImageList();
             imageList.Images.Add(Properties.Resources.Folder1);
 
             treeView.ImageList = imageList;
         }
 
+        private void DesializeTreeView()
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            using (FileStream file = new FileStream("data.bin", FileMode.Open))
+            {
+
+            }
+        }
+
         private void CteareRoot(object sender, EventArgs e)
         {
             try
             {
-                TreeNode node = new TreeNode();
+                var node = new TreeNode();
 
                 node.Text = GetCurrectName(null);
-                node.Name = node.Text;
+                node.Name = node.Text + "/";
+                nodesProducts.Add(node.Name, new List<Product>());
 
                 node.ImageIndex = 0;
                 node.ContextMenuStrip = nodesMenuStrip;
@@ -49,11 +66,12 @@ namespace ProductManager
         {
             ToolStripItem menu = sender as ToolStripItem;
 
-            TreeNode node = new TreeNode();
+            var node = new TreeNode();
             try
             {
                 node.Text = GetCurrectName(treeView.SelectedNode);
-                node.Name = node.Text;
+                node.Name = treeView.SelectedNode.FullPath + node.Text;
+                nodesProducts.Add(node.Name, new List<Product>());
 
                 node.ImageIndex = 0;
                 node.ContextMenuStrip = nodesMenuStrip;
@@ -86,6 +104,7 @@ namespace ProductManager
             if (ValidateNodesName(changeNodeNameTextBox.Text))
             {
                 node.Text = changeNodeNameTextBox.Text;
+                node.Name = node.FullPath + node.Text;
                 nodesMenuStrip.Close();
             }
             else
@@ -112,6 +131,46 @@ namespace ProductManager
                 return;
             }
             treeView.Nodes.Remove(treeView.SelectedNode);
+            var formatter = new BinaryFormatter();
+            using (FileStream file = new FileStream("data.bin", FileMode.OpenOrCreate))
+            {
+                foreach (var node in treeView.Nodes)
+                {
+                    formatter.Serialize(file, node);
+                }
+            }
+        }
+
+        private void Form1FormClosed(object sender, FormClosedEventArgs e)
+        {
+            var formatter = new BinaryFormatter();
+            using (FileStream file = new FileStream("data.bin", FileMode.OpenOrCreate))
+            {
+                foreach (var node in treeView.Nodes)
+                    formatter.Serialize(file, node);
+            }
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            string nodePath = e.Node.Name;
+            var products = nodesProducts[nodePath];
+            currentList = products;
+            productsTable.RowCount = 2;
+            tableLayoutPanel1.Visible = true;
+            this.Text = nodePath;
+            ControlUpdate.BeginControlUpdate(productsTable);
+            // TODO
+            ControlUpdate.EndControlUpdate(productsTable);
+        }
+
+        private void treeView_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
         }
     }
 }

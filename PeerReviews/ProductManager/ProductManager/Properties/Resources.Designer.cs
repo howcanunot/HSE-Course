@@ -63,9 +63,39 @@ namespace ProductManager.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addthis {
+            get {
+                object obj = ResourceManager.GetObject("addthis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bodnal {
+            get {
+                object obj = ResourceManager.GetObject("bodnal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Folder1 {
             get {
                 object obj = ResourceManager.GetObject("Folder1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zxc {
+            get {
+                object obj = ResourceManager.GetObject("zxc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
